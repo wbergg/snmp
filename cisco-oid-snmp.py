@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from snmp_helper import snmp_get_oid,snmp_extract
 
 def snmp_poll(a_device, oid):
@@ -11,4 +13,5 @@ def main():
         for oid in OIDLIST:
             print snmp_poll(router, oid) + "\n---------"
 
-main()
+if __name__ == "__main__":
+    main()
